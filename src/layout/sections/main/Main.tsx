@@ -12,7 +12,6 @@ export const Main = () => {
                     <Name>I am Marina Avetsisian</Name>
                     <MainTitle>A Web Developer. </MainTitle>
                 </div>
-
                 <Photo src={photo}/>
             </FlexWrapper>
         </StyledMain>
