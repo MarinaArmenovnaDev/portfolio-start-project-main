@@ -30,7 +30,7 @@ const StyledSkill = styled.div`
     padding: 62px 20px 40px;
 `
 
-const IconWrapper = styled.div`
+ export const IconWrapper = styled.div`
     position: relative;
 
     
@@ -51,16 +51,11 @@ const IconWrapper = styled.div`
 
 const SkillTitle = styled.h3`
     margin: 70px 0 15px;
-    font: 700 16px "Josefin Sans", sans-serif;
-    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: ${theme.colors.font};
 `
 const SkillText = styled.p`
     text-align: center;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.4;
     color: ${theme.colors.font};
 `
 

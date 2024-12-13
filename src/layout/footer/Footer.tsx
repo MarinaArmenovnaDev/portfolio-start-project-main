@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
 import {FlexWrapper} from "../../components/flexWrapper";
+import {theme} from "../../styles/Theme";
 
 export const Footer = () => {
     return (
@@ -30,7 +31,7 @@ export const Footer = () => {
                         </Sociallink>
                     </SocialItem>
                 </SocialList>
-                <Copyright>© 2023 Svetlana Dyablo, All Rights Reserved.</Copyright>
+                <Copyright>© 2024 Marina Avetsisian, All Rights Reserved.</Copyright>
             </FlexWrapper>
         </StyledFooter>
     );
@@ -38,18 +39,42 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
     min-height: 20vh;
-    background-color: #b8f1d1;`
+    background-color: ${theme.colors.primaryBg};
+    padding: 40px 0;
+`
 const Name = styled.span`
-    
+    font: 700 22px "Josefin Sans", sans-serif;
+    letter-spacing: 0.14em;
 `
 const SocialList = styled.ul`
     display: flex;
-    gap: 30px;
+    margin: 30px 0;
+    gap: 20px;
 `
 const SocialItem = styled.li`
 `
 const Sociallink = styled.a`
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: ${theme.colors.accent};
+    
+    &:hover {
+        color: ${theme.colors.primaryBg};
+        transform: translateY(-4px);
+        background-color: ${theme.colors.accent};
+    }
 `
 
 const Copyright = styled.small`
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    opacity: 0.5;
 `
