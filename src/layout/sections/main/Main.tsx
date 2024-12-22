@@ -1,90 +1,26 @@
 import React from 'react';
-import styled from "styled-components";
 import photo from '../../../assets/images/MyPhoto.webp'
 import {FlexWrapper} from "../../../components/flexWrapper";
 import {Container} from "../../../components/Container";
-import {theme} from "../../../styles/Theme";
+import {S} from "./Main_Styles"
 
-export const Main = () => {
+
+export const Main: React.FC = () => {
     return (
-        <StyledMain>
+        <S.Main>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"}>
+                <FlexWrapper align={"center"} justify={"space-around"} wrap={"wrap"}>
                     <div>
-                        <SmallText>Hi There</SmallText>
-                        <Name>I am <span>Marina Avetsisian</span></Name>
-                        <MainTitle>A Web Developer. </MainTitle>
+                        <S.SmallText>Hi There</S.SmallText>
+                        <S.Name>I am <span>Marina Avetsisian</span></S.Name>
+                        <S.MainTitle>A Web Developer. </S.MainTitle>
                     </div>
-                    <PhotoWrapper>
-                        <Photo src={photo}/>
-                    </PhotoWrapper>
+                    <S.PhotoWrapper>
+                        <S. Photo src={photo}/>
+                    </S.PhotoWrapper>
                 </FlexWrapper>
             </Container>
-        </StyledMain>
+        </S.Main>
     );
 };
 
-const StyledMain = styled.section`
-    min-height: 100vh;
-    display: flex;
-`
-
-const Photo = styled.img`
-    width: 350px;
-    height: 430px;
-    object-fit: cover;
-`
-
-const PhotoWrapper = styled.div`
-position: relative;
-    z-index: 0;
-
-    &::before{
-        content: '';
-        width: 360px;
-        height: 470px;
-        border: 5px solid ${theme.colors.accent};
-        
-        position: absolute;
-        top:-24px;
-        left: 24px;
-        z-index: -1;
-    }
-`
-
-
-const MainTitle = styled.h1`
-    font-weight: 400;
-    font-size: 27px;
-    color: #fff;
-`
-
-const SmallText = styled.span`
-    font-weight: 400;
-    font-size: 14px;
-`
-
-const Name = styled.h2`
-    font: 700 50px "Josefin Sans", sans-serif;
-    letter-spacing: 0.05em;
-    margin: 10px 0;
-  
-    
-    span {
-        position: relative;
-        z-index: 0;
-        
-        &::before{
-            content: '';
-            display: inline-block;
-            width: 100%;
-            height: 20px;
-            background-color: ${theme.colors.accent};
-            
-            position: absolute;
-            bottom: 0;
-            z-index:-1;
-            
-        }
-    }
-`

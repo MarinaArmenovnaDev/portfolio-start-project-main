@@ -5,7 +5,7 @@ import {Button} from "../../../components/Button";
 import {Container} from "../../../components/Container";
 import {FlexWrapper} from "../../../components/flexWrapper";
 
-export const Slogan = () => {
+export const Slogan: React.FC = () => {
     return (
         <StyledSlogan>
             <Container>
@@ -20,5 +20,4 @@ export const Slogan = () => {
 
 const StyledSlogan = styled.section`
     min-height: 30vh;
-    background-color: #7dcef8;
 `
