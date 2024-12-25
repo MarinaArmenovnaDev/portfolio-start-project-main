@@ -7,12 +7,15 @@ import {Testimony} from "./layout/sections/testimony/Testimony";
 import {Contact} from "./layout/sections/contacts/Contacts";
 import {Slogan} from "./layout/sections/slogan/Slogan";
 import {Footer} from "./layout/footer/Footer";
+import {Particle} from "./components/particle/Particle";
+import {GoTopBtn} from "./components/goTopBtn/GoTopBtn";
 
 
 function App() {
     return (
         <div className="App">
-           <Header/>
+            <Particle/>
+            <Header/>
             <Main/>
             <Skills/>
             <Works/>
@@ -20,6 +23,7 @@ function App() {
             <Contact/>
             <Slogan/>
             <Footer/>
+            <GoTopBtn/>
         </div>
     );
 }

@@ -8,12 +8,11 @@ const Works = styled.section`
     ${FlexWrapper}{
         gap: 30px;
     }
+    position: relative;
 `
 
 const Work = styled.div`
     background-color: ${theme.colors.secondaryBg};
-    width: 330px;
-    flex-grow: 1;
     
 
     ${Link} {
@@ -21,9 +20,6 @@ const Work = styled.div`
 
         & + ${Link} {
             margin-left: 20px;
-        }
-        @media ${theme.media.desctop} {
-            max-width: 540px;
         }
     }
 `
@@ -35,7 +31,8 @@ const ImageWrapper = styled.div`
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -40%);
+        transition: ${theme.animations.transition};
 
         &::before {
             width: 100%;
@@ -50,9 +47,10 @@ const ImageWrapper = styled.div`
         right: 0;
         top: 0;
         bottom: 0;
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(2px);
         background: rgba(0, 0, 0, 0.3);
         opacity: 0;
+        transition: ${theme.animations.transition};
     }
 
     &:hover {
@@ -61,7 +59,7 @@ const ImageWrapper = styled.div`
         }
 
         ${Button} {
-            opacity: 1;
+            opacity: 1;transform: translate(-50%, -50%);
         }
     }
 

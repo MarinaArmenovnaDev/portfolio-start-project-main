@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 
 const Contacts = styled.section`
-
+    position: relative;
 `
 
 const Form = styled.form`
@@ -13,11 +13,11 @@ const Form = styled.form`
     align-items: center;
     gap: 16px;
     margin: 0 auto;
-    
-   textarea{
-       resize: none;
-       height: 155px;
-   }
+
+    textarea {
+        resize: none;
+        height: 155px;
+    }
 `
 
 const Field = styled.input`
@@ -25,23 +25,23 @@ const Field = styled.input`
     background-color: ${theme.colors.secondaryBg};;
     border: 1px solid ${theme.colors.borderColor};
     height: 32px;
-    
+
     padding: 7px 15px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 12px;
     letter-spacing: 0.05em;
     color: ${theme.colors.font};
-    
+
     &::placeholder {
         color: ${theme.colors.placeholderColor};
         text-transform: capitalize;
     }
-    
-    &:focus-visible{
+
+    &:focus-visible {
         outline: 1px solid ${theme.colors.borderColor};
     }
-    
+
 `
 
 export const S = {

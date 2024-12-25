@@ -54,7 +54,10 @@ const PhotoWrapper = styled.div`
 
 const MainTitle = styled.h1`
     ${font({weight: 400, Fmax: 27, Fmin: 20})}
-    color: #fff;
+   
+    p {
+        display: none;
+    }
 `
 
 const SmallText = styled.span`
